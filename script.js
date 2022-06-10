@@ -7,6 +7,7 @@ let gridArea = document.getElementById("movies-grid");
 let searchInput = document.getElementById("search-input");
 let searchButton = document.getElementById("search-btn");
 let showMoreButton = document.getElementById("load-more-movies-btn");
+let closeButton = document.getElementById("close-search-btn");
 
 //VARIABLES
 let pageNum = 1;
@@ -15,16 +16,28 @@ let searchType = "movie/now_playing";
 
 //EVENT LISTENERS
 formArea.addEventListener("submit", searchSubmit);
-
 searchButton.addEventListener("click", searchSubmit);
+
+closeButton.addEventListener("click", () => {
+    gridArea.innerHTML = ``;
+    movieName = "";
+    searchInput.value = "";
+    pageNum = 1;
+    searchType = "movie/now_playing";
+    getResults();
+});
 
 showMoreButton.addEventListener("click", () => {
     pageNum++;
     getResults();
 });
 
+
+
+
 //FUNCTIONS
 //Function to get movie API results
+
 function searchSubmit(evt)
 {
     console.log("woop")
@@ -32,10 +45,7 @@ function searchSubmit(evt)
 
     movieName = searchInput.value;
     console.log(movieName);
-
     searchType = "search/movie";
-
-
 
     gridArea.innerHTML = ``;
     getResults();
@@ -62,10 +72,8 @@ function displayResults(movieData)
         `
             <div class="movie-card">
                 <img src="https://image.tmdb.org/t/p/w200/${posterPath}" class="movie-poster" alt="${movieData.results[i].title} poster" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1c2YfTsdjglP00n5iGlsq8ChEOAiKV72SAg&usqp=CAU';" />
-                <div id="info-section">
-                    <h4 class="movie-title">${movieData.results[i].title}</h4>
-                    <p>Rating: ${movieData.results[i].vote_average} / 10 </p>
-                </div>
+                <h4 class="movie-title">${movieData.results[i].title}</h4>
+                <p class="movie-votes"> Rating: ${movieData.results[i].vote_average} / 10 </p>
             </div>
         `
     }

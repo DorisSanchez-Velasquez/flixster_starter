@@ -8,18 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h1>FLIXSTER</h1>
     <form id="form-area">
         <input type="text" placeholder="Search for a movie " id="search-input" required>
         <button type="button" id="search-btn"> SEARCH </button>
+        <button type="button" id="close-search-btn" > X </button>
     </form>
 
     <br>
 
+    <h3>Now Playing</h3>
     <div id="movies-grid"></div>
-
     <button type="button" id="load-more-movies-btn" class="hidden"> SHOW MORE </button>
-    
+
+    <!-- POP UP INFORMATION CODE-->
+    <div class="popup-area" id="popup-area">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+        </div>
+    </div>
+
+
+
     <script src="script.js"></script>
 </body>
 </html>
