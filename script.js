@@ -8,6 +8,9 @@ let searchInput = document.getElementById("search-input");
 let searchButton = document.getElementById("search-btn");
 let showMoreButton = document.getElementById("load-more-movies-btn");
 let closeButton = document.getElementById("close-search-btn");
+let movieCard = document.querySelector(".movie-card");
+let popupArea = document.querySelector("#mypopup-area");
+let closePopup = document.getElementById("close-popup");
 
 //VARIABLES
 let pageNum = 1;
@@ -31,6 +34,8 @@ showMoreButton.addEventListener("click", () => {
     pageNum++;
     getResults();
 });
+
+//closePopup.addEventListener("click", clearPopup);
 
 
 
@@ -70,7 +75,7 @@ function displayResults(movieData)
         let posterPath = movieData.results[i].poster_path;
         gridArea.innerHTML +=
         `
-            <div class="movie-card">
+            <div class="movie-card" onclick="showMoreMovieInfo()">
                 <img src="https://image.tmdb.org/t/p/w200/${posterPath}" class="movie-poster" alt="${movieData.results[i].title} poster" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1c2YfTsdjglP00n5iGlsq8ChEOAiKV72SAg&usqp=CAU';" />
                 <h4 class="movie-title">${movieData.results[i].title}</h4>
                 <p class="movie-votes"> Rating: ${movieData.results[i].vote_average} / 10 </p>
@@ -80,9 +85,46 @@ function displayResults(movieData)
     showMoreButton.classList.remove("hidden");
 }
 
+function showMoreMovieInfo()
+{
+    console.log("popup entered");
+    popupArea.innerHTML = ``;
+    popupArea.innerHTML +=
+    `
+        <button type="button" id="close-popup" onclick="clearPopup()"> X </button>
+        <h1>POPUP INFORMATION</h1>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+        </p>
+
+    `
+    popupArea.style.display = "block";
+}
+
+function clearPopup()
+{   
+    console.log("clear popup entered");
+    popupArea.style.display = 'none';
+    popupArea.innerHTML = ``;
+}
+
+
 //Function to load movie posters immediately upon load
 window.onload
 {
     console.log("page loaded");
     getResults();
+}
+
+window.onclick = function(evt)
+{
+    if(evt.target == popupArea)
+    {
+        popupArea.style.display = "none";
+        popupArea.innerHTML = ``;
+    }
 }

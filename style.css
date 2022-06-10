@@ -1,6 +1,6 @@
 body
 {
-    background-color: #000000;
+    background-color: #031a38;
     color: #FFFFFF;
     margin-left: auto;
     margin-right: auto;
@@ -8,10 +8,19 @@ body
     font-family: century gothic,Arial, Helvetica, sans-serif;
 }
 
+#now-playing
+{
+    display:flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
 h1, #form-area
 {
     display: flex;
     justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #movies-grid
@@ -20,6 +29,7 @@ h1, #form-area
     grid-template-columns: auto auto auto auto auto;
     justify-content: space-evenly;
 }
+
 
 .hidden
 {
@@ -34,6 +44,7 @@ h1, #form-area
     margin-bottom: 1em;
 }
 
+
 #load-more-movies-btn
 {
     display: block;
@@ -47,9 +58,93 @@ h1, #form-area
     display:none;
     position:fixed;
     z-index:1;
-    width:100%;
-    height:100%;
+    left:0;
+    top:0;
+    width:500px;
+    height:500px;
     overflow:auto;
-    background-color:antiquewhite;
+    background-color: #000000;
+    opacity: 80%;
 }
 
+
+#close-popup
+{
+    color: #FFFFFF;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #000000;
+    border: 3px solid #FFFFFF;
+}
+
+#close-popup:hover, #close-popup:focus
+{
+    color: #0b53b3;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #0b53b3;
+}
+
+
+
+/*OTHER CSS DESIGNS (FORMAT LATER)*/
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    margin-top: 0px;
+    width: 100%;
+    margin-left: 0;
+    height:90%;
+
+}
+
+h1
+{
+    font-size: 50px;
+}
+
+#search-input, #search-btn, #load-more-movies-btn
+{
+    font-family: century gothic,Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+
+#search-btn, #load-more-movies-btn
+{
+    background-color: #0b53b3;
+    color: white;
+    border: 3px solid #FFFFFF;
+}
+
+#load-more-movies-btn
+{
+    padding: 10px;
+}
+
+#search-input, #search-btn
+{
+    margin-right: 10px;
+}
+
+#logo-title
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#logo
+{
+    height:100%;
+}
+
+#search-input
+{
+    width: 250px;
+}
