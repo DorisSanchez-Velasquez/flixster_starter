@@ -42,19 +42,20 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-URL (in case videos do not load): http://g.recordit.co/odbJMUA0Rl.gif
-
 LOADING CURRENT MOVIES NOW PLAYING: 
-![](http://g.recordit.co/E6ltwS16wP.gif)
+![](http://g.recordit.co/kvyt9oWpKi.gif)
 
 SEARCH BUTTON FUNCTION:
 ![](http://g.recordit.co/HKtqjPfRbt.gif)
 
 LOAD MORE WHEN WORD IS SEARCHED
-![](http://g.recordit.co/AkVJ6HB51F.gif)
+![](http://g.recordit.co/r4Krlb8pf4.gif)
 
 RESET ENTIRE SEARCH AND CLEAR PREVIOUSLY DISPLAYED MOVIES
 ![](http://g.recordit.co/jn8RMdXKha.gif)
+
+POPUP INFORMATION (PLACEHOLDER AT MOMENT)
+![](http://g.recordit.co/Nbl9sazJv2.gif)
 
 ### Reflection
 
