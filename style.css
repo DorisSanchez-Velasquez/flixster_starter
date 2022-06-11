@@ -58,15 +58,27 @@ h1, #form-area
     display:none;
     position:fixed;
     z-index:1;
-    left:0;
-    top:0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width:500px;
     height:500px;
     overflow:auto;
     background-color: #000000;
-    opacity: 80%;
+    opacity: 85%;
 }
 
+#extra-movie-info
+{
+    text-align: center;
+    padding: 10px;
+}
+
+#movie-runtime-release
+{
+    display: flex;
+    justify-content: center;
+}
 
 #close-popup
 {
@@ -86,6 +98,12 @@ h1, #form-area
     border: 2px solid #0b53b3;
 }
 
+.movie-backdrop
+{
+    width:450px;
+    filter: brightness(100%) saturate(125%);
+}
+
 
 
 /*OTHER CSS DESIGNS (FORMAT LATER)*/
@@ -99,7 +117,6 @@ h1, #form-area
     width: 100%;
     margin-left: 0;
     height:90%;
-
 }
 
 h1
