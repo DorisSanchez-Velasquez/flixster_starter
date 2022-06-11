@@ -9,29 +9,43 @@
 </head>
 <body>
 
-    <div class="header">
-        <div id="logo-title">
-            <img src="popcorn.png" id="logo" alt="popcorn icon by icons8"/>
-            <h1>FLIXSTER</h1>
+    <div class="responsive-container">
+        <div class="header">
+            <div id="logo-title">
+                <img src="popcorn.png" id="logo" alt="popcorn icon by icons8"/>
+                <h1>FLIXSTER</h1>
+            </div>
+            <form id="form-area">
+                <input type="text" placeholder="Search for a movie " id="search-input" required>
+                <button type="button" id="search-btn"> SEARCH </button>
+                <!--<button type="button" id="close-search-btn" > X </button>-->
+                <img id="close-search-btn" src = "exitMark.png" alt="Exit Mark Icon By Icons8"/>
+            </form>
         </div>
-        <form id="form-area">
-            <input type="text" placeholder="Search for a movie " id="search-input" required>
-            <button type="button" id="search-btn"> SEARCH </button>
-            <!--<button type="button" id="close-search-btn" > X </button>-->
-            <img id="close-search-btn" src = "exitMark.png" alt="Exit Mark Icon By Icons8"/>
-        </form>
     </div>
+
     <br>
 
     <h3 id="now-playing">- NOW PLAYING -</h3>
+    
     <div id="movies-grid"></div>
+        
     <button type="button" id="load-more-movies-btn" class="hidden"> SHOW MORE </button>
+
+
 
     <!-- POP UP INFORMATION CODE-->
     <div class="popup-area" id="mypopup-area">
         <div class="popup-content">
             <!--<span class="close-popup">&times;</span>-->
         </div>
+    </div>
+
+
+    <br>
+
+    <div class="attribution-area">
+        <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_2-9665a76b1ae401a510ec1e0ca40ddcb3b0cfe45f1d51b77a308fea0845885648.svg" alt="The Movie DB Logo" id="movieDB-logo"/>
     </div>
 
 

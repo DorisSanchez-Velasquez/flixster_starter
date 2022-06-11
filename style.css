@@ -1,18 +1,13 @@
+/*GENERAL CSS FORMATTING*/
 body
 {
-    background-color: #031a38;
+    /*background-color: #031a38;*/
+    background-color: #000821;
     color: #FFFFFF;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     font-family: century gothic,Arial, Helvetica, sans-serif;
-}
-
-#now-playing
-{
-    display:flex;
-    justify-content: center;
-    font-size: 30px;
 }
 
 h1, #form-area
@@ -23,13 +18,18 @@ h1, #form-area
     margin-right: 20px;
 }
 
-#movies-grid
+h1
 {
-    display:grid;
-    grid-template-columns: auto auto auto auto auto;
-    justify-content: space-evenly;
+    font-size: 50px;
 }
 
+#now-playing
+{
+    display:flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top:auto;
+}
 
 .hidden
 {
@@ -38,21 +38,134 @@ h1, #form-area
     margin-right: auto;
 }
 
+
+
+
+
+/*CSS FORMATTING FOR THE HEADER NAVIGATION AREA*/
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1)); 
+    margin-top: 0px;
+    width: 100%;
+    margin-left: 0;
+    position: fixed;
+    top:0;
+
+}
+
+.responsive-container
+{
+    padding-top: 10%;
+}
+
+#logo-title
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#logo
+{
+    height:100%;
+}
+
+#search-input
+{
+    width: 250px;
+}
+
+
+
+
+/*CSS FORMATTING FOR MOVIE GRID DISPLAY AREA*/
+#movies-grid
+{
+    display:grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-evenly;
+    grid-gap: 5px;
+    grid-auto-rows: minmax(125px, auto);
+}
+
+
+@media screen and (max-width: 500px)
+{
+    #movies-grid
+    {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+
+
 .movie-card
 {
     width: 200px;
     margin-bottom: 1em;
+
+    cursor: pointer; 
+    -webkit-transition-property: all; 
+    -webkit-transition-duration: 0.3s; 
+    -webkit-transition-timing-function: ease; 
+}
+
+.movie-card:hover
+{
+    transform: scale(1.2);
+}
+
+.movie-poster:hover
+{
+    border: 1px solid #FFFFFF;
+    filter: brightness(75%);
 }
 
 
+
+
+
+/*CSS FORMATTING FOR BUTTONS*/
 #load-more-movies-btn
 {
     display: block;
     margin: auto;
 }
 
+#search-input, #search-btn, #load-more-movies-btn
+{
+    font-family: century gothic,Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+}
 
-/*POP UP INFORMATION CSS*/
+
+#search-btn, #load-more-movies-btn
+{
+    /*background-color: #0b53b3;*/
+    background-color: #0c006b;
+    color: white;
+    border: 2px solid #FFFFFF;
+}
+
+#load-more-movies-btn
+{
+    padding: 10px;
+}
+
+#search-input, #search-btn
+{
+    margin-right: 10px;
+}
+
+
+
+
+/*CSS FORMATTING FOR POPUP INFORMATION*/
 .popup-area
 {
     display:none;
@@ -61,11 +174,25 @@ h1, #form-area
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width:50%;
+    width:70%;
     height:500px;
     overflow:auto;
-    background-color: #000000;
-    opacity: 85%;
+    opacity: 90%;
+
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bg color 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+
+}
+
+@keyframes bgcolor
+{
+    0%{background-color: #000000}
+    30%{background-color: #060033}
+    60%{background-color: #000000}
+    90%{background-color: #001433}
+    100%{background-color: #000000}
 }
 
 #extra-movie-info
@@ -87,81 +214,48 @@ h1, #form-area
     font-size: 40px;
     font-weight: bold;
     background-color: #000000;
-    border: 3px solid #FFFFFF;
 }
 
 #close-popup:hover, #close-popup:focus
 {
-    color: #0b53b3;
+    color: #0052cc;
     text-decoration: none;
     cursor: pointer;
-    border: 2px solid #0b53b3;
+    border: 1px solid #0052cc;
 }
 
 .movie-backdrop
 {
-    width:450px;
-    filter: brightness(100%) saturate(125%);
+    width:80%;
+    filter: brightness(110%) saturate(125%);
+}
+
+#popup-title
+{
+    font-size: 40px;
 }
 
 
 
-/*OTHER CSS DESIGNS (FORMAT LATER)*/
-.header
+
+
+/*CSS FORMATING FOR ATTRIBUTION AREA*/
+.attribution-area
 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #000000;
-    margin-top: 0px;
+    color: #FFFFFF;
+    bottom: 0;
     width: 100%;
-    margin-left: 0;
-    height:90%;
-}
-
-h1
-{
-    font-size: 50px;
-}
-
-#search-input, #search-btn, #load-more-movies-btn
-{
-    font-family: century gothic,Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    border-radius: 8px;
-}
-
-
-#search-btn, #load-more-movies-btn
-{
-    background-color: #0b53b3;
-    color: white;
-    border: 3px solid #FFFFFF;
-}
-
-#load-more-movies-btn
-{
-    padding: 10px;
-}
-
-#search-input, #search-btn
-{
-    margin-right: 10px;
-}
-
-#logo-title
-{
     display: flex;
-    justify-content:center;
-    align-items: center;
+    margin-top: auto;
+    position: fixed;
+    height: 25px;
 }
 
-#logo
+#movieDB-logo
 {
-    height:100%;
-}
+    width: 15%;
+    display: flex;
+    margin-left: 10px;
 
-#search-input
-{
-    width: 250px;
 }

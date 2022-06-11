@@ -74,7 +74,7 @@ function displayResults(movieData)
         gridArea.innerHTML +=
         `
             <div class="movie-card" onclick="requestMoreMovieInfo(${movieId})">
-                <img src="https://image.tmdb.org/t/p/w200/${posterPath}" class="movie-poster" alt="${movieData.results[i].title} poster" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1c2YfTsdjglP00n5iGlsq8ChEOAiKV72SAg&usqp=CAU';" />
+                <img src="https://image.tmdb.org/t/p/w200/${posterPath}" class="movie-poster" width="200" height="300" alt="${movieData.results[i].title} poster" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1c2YfTsdjglP00n5iGlsq8ChEOAiKV72SAg&usqp=CAU';" />
                 <h4 class="movie-title">${movieData.results[i].title}</h4>
                 <p class="movie-votes"> Rating: ${movieData.results[i].vote_average} / 10 </p>
             </div>
@@ -92,11 +92,9 @@ async function requestMoreMovieInfo(movieId)
 {
     let movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`;
     
-https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US
     console.log(movieUrl);
     let movieResponse = await fetch(movieUrl);
     let movieResponseData = await movieResponse.json();
-    console.log(movieResponseData);
     showMoreMovieInfo(movieResponseData);
 }
 
@@ -110,7 +108,7 @@ function showMoreMovieInfo(movieCardData)
     `
         <button type="button" id="close-popup" onclick="clearPopup()"> X </button>
         <div id="extra-movie-info">
-            <h1>${movieCardData.title}</h1>
+            <h1 id="popup-title">${movieCardData.title}</h1>
             <img src="https://image.tmdb.org/t/p/w200/${backDropPath}" class="movie-backdrop" alt="${movieCardData.title} poster" onerror="this.onerror=null;this.src='imageNotAvailable.jpg';" />
             <div id="movie-runtime-release">
                 <h4>Runtime: ${movieCardData.runtime} |</h4>
