@@ -46,6 +46,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 `ADD_EMBEDDED_CODE_HERE`
 <img src="http://g.recordit.co/odbJMUA0Rl.gif" width=250>
+![](http://g.recordit.co/odbJMUA0Rl.gif)
 
 ### Reflection
 
