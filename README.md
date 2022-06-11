@@ -1,4 +1,3 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
 
 ## Week 1 Assignment: Flixster
 
@@ -55,7 +54,7 @@ RESET ENTIRE SEARCH AND CLEAR PREVIOUSLY DISPLAYED MOVIES
 ![](http://g.recordit.co/jn8RMdXKha.gif)
 
 POPUP INFORMATION (PLACEHOLDER AT MOMENT)
-![](http://g.recordit.co/Nbl9sazJv2.gif)
+![](http://g.recordit.co/n2GIadq2r7.gif)
 
 ### Reflection
 
@@ -76,7 +75,7 @@ Most importantly, my skills in HTML, CSS, and Javascript have definitely improve
 - MOVIE LIBRARY: THE MOVIE DB
 https://www.themoviedb.org/
 
--WEBSITE ICONS: ICONS8
+- WEBSITE ICONS: ICONS8
 https://icons8.com/
 
 ### Shout out
