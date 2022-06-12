@@ -1,7 +1,6 @@
 /*GENERAL CSS FORMATTING*/
 body
 {
-    /*background-color: #031a38;*/
     background-color: #000821;
     color: #FFFFFF;
     margin-left: auto;
@@ -146,7 +145,6 @@ h1
 
 #search-btn, #load-more-movies-btn
 {
-    /*background-color: #0b53b3;*/
     background-color: #0c006b;
     color: white;
     border: 2px solid #FFFFFF;

@@ -42,25 +42,25 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 ### Walkthrough Video
 
 LOADING CURRENT MOVIES NOW PLAYING: 
-![](http://g.recordit.co/PtQi4sTY8z.gif)
+![](http://g.recordit.co/fkbC26w7LI.gif)
 
 SEARCH BUTTON FUNCTION:
 ![](http://g.recordit.co/WNDhTGkGCI.gif)
 
 LOAD MORE WHEN WORD IS SEARCHED
-![](http://g.recordit.co/HmYdnpiryb.gif)
+![](http://g.recordit.co/T2TqsLGeU0.gif)
 
 RESET ENTIRE SEARCH AND CLEAR PREVIOUSLY DISPLAYED MOVIES
 ![](http://g.recordit.co/SU0UlWDKzL.gif)
 
-POPUP INFORMATION (PLACEHOLDER AT MOMENT)
-![](http://g.recordit.co/BXc32tYqOi.gif)
+POPUP INFORMATION
+![](http://g.recordit.co/H3U5rlkTqy.gif)
 
 ANIMATED POPUP (COLOR CHANGING)
-![](http://g.recordit.co/pCxU1eHwtE.gif)
+![](http://g.recordit.co/hCl7iQCbdf.gif)
 
 RESPONSIVE WEBSITE SCREEN (AMOUNT OF MOVIES DISPLAYED CHANGES)
-![](http://g.recordit.co/m4DAnPKGmN.gif)
+![](http://g.recordit.co/60keNCpxVT.gif)
 
 ### Reflection
 
