@@ -57,7 +57,7 @@ POPUP INFORMATION
 ![](http://g.recordit.co/H3U5rlkTqy.gif)
 
 ANIMATED POPUP (COLOR CHANGING)
-![](http://g.recordit.co/hCl7iQCbdf.gif)
+![](http://g.recordit.co/tF0yMfDpMU.gif)
 
 RESPONSIVE WEBSITE SCREEN (AMOUNT OF MOVIES DISPLAYED CHANGES)
 ![](http://g.recordit.co/60keNCpxVT.gif)
